@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/animal-viewer/static/css/main.e6c13ad2.css",
-    "main.js": "/animal-viewer/static/js/main.92b27eca.js",
+    "main.js": "/animal-viewer/static/js/main.e6654f09.js",
     "index.html": "/animal-viewer/index.html",
     "main.e6c13ad2.css.map": "/animal-viewer/static/css/main.e6c13ad2.css.map",
-    "main.92b27eca.js.map": "/animal-viewer/static/js/main.92b27eca.js.map"
+    "main.e6654f09.js.map": "/animal-viewer/static/js/main.e6654f09.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.92b27eca.js"
+    "static/js/main.e6654f09.js"
   ]
 }
