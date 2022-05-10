@@ -30,26 +30,32 @@ const Button = styled.button`
 
 const Div = styled.div`
   text-align: center;
-  padding-bottom: 20px;
+  padding: 10px;
 `;
 
-// const Img = styled.img`
-//   height: 300px;
-//   width: auto;
-//   outline: 3px solid palevioletred;
-//   outline-offset: -1px;
-//   outline-radius: 15px;
+const DivLarger = styled.div`
+  text-align: center;
+  padding: 50px;
+  margin-top: 30px;
+`;
+
+const ByText = styled.text`
+  font: 13px monospace;
+  color: grey;
+`;
+
+// const ImgContainer = styled.div`
+//   text-align: center;
+//   height: 400px;
+//   padding: 20px;
 // `;
 
 const Img = styled.img`
-  height: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 7px palevioletred;
+  height: 400px;
   width: auto;
-  border: 3px solid palevioletred;
-  border-radius: 15px;
-  background
 `;
-
-// const Select = styled.select``;
 
 // Component definition
 
@@ -88,11 +94,13 @@ function Menu() {
     axios.get(url).then((response) => {
       const imgs = response.data.message;
       var randomElement = imgs[Math.floor(Math.random() * imgs.length)];
-      while (randomElement === dogImgURL) {
-        randomElement = imgs[Math.floor(Math.random() * imgs.length)];
-        console.log(randomElement, dogImgURL);
+      if (imgs.length > 1) {
+        while (randomElement === dogImgURL) {
+          randomElement = imgs[Math.floor(Math.random() * imgs.length)];
+          console.log(randomElement, dogImgURL);
+        }
+        setDogImgURL(randomElement);
       }
-      setDogImgURL(randomElement);
     });
   };
 
@@ -123,6 +131,12 @@ function Menu() {
       <Div>
         <Img src={dogImgURL} alt={dogImgURL} />
       </Div>
+      <DivLarger>
+        <ByText>
+          A React App by Paul Gan <br></br>
+          Based on the <a href="https://dog.ceo/dog-api/">Dog API</a>
+        </ByText>
+      </DivLarger>
     </Div>
   );
 }
