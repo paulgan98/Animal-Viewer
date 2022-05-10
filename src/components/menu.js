@@ -44,11 +44,11 @@ const ByText = styled.text`
   color: grey;
 `;
 
-// const ImgContainer = styled.div`
-//   text-align: center;
-//   height: 400px;
-//   padding: 20px;
-// `;
+const ImgContainer = styled.div`
+  text-align: center;
+  height: 400px;
+  padding: 20px;
+`;
 
 const Img = styled.img`
   border-radius: 20px;
@@ -128,9 +128,9 @@ function Menu() {
         </label>
         <Button onClick={() => getRandomDogImage(breed)}>Show Dog 🐶</Button>
       </Div>
-      <Div>
+      <ImgContainer>
         <Img src={dogImgURL} alt={dogImgURL} />
-      </Div>
+      </ImgContainer>
       <DivLarger>
         <ByText>
           A React App by Paul Gan <br></br>
